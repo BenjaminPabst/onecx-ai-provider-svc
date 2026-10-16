@@ -353,7 +353,7 @@ components:
         consumer authenticates to the server, mirroring how
         onecx-ai-provider-runtime builds its MCP clients:
         - `OAUTH`: the consumer sends its own OIDC client-credentials token as
-          `Authorization: Bearer ...` (a fresh token per request).
+          `Authorization: Bearer <token>` (a fresh token per request).
         - `API_KEY`: the consumer resolves `credentialRef` to the key value and
           sends it as `Authorization: <key>` (no `Bearer` prefix).
         - absent (null): no server `Authorization` header; only the user
